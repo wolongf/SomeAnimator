@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/animator_vector_drawable.xml" value="0.2555" />
+        <entry key="app/src/main/res/drawable/animatorvectordrawable.xml" value="0.2555" />
+        <entry key="app/src/main/res/drawable/vector_drawable.xml" value="0.2555" />
+        <entry key="app/src/main/res/drawable/vectordrawable.xml" value="0.2555" />
+        <entry key="app/src/main/res/layout/a_scene.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_add_curve.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_add_curved_motion.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_animate_drawable_graphics.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_animate_layout_changes_using_atransition.xml" value="0.32864583333333336" />
+        <entry key="app/src/main/res/layout/activity_animate_movement_using_spring_physics.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_animation_show_or_hide_view.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_auto_add_animation_for_updated_layout.xml" value="0.32864583333333336" />
+        <entry key="app/src/main/res/layout/activity_auto_animate_layout_updates.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_basic_animation.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_card_back_fragment.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_card_flip.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_card_front_fragment.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_circular_reveal.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_create_acustom_transition_animation.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_crossfade.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_drawable.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_enlarge_a_view_using_a_zoom_animation.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/activity_move_a_view_with_animation.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_move_views_using_a_fling_animation.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_reveal_circle.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_reveal_or_hide_a_view_using_animation.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_slide_between_fragments_using_view_pager2.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_start_an_using_activity_options.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_start_an_using_an_animation.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_start_an_using_override_pending_transition.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_start_an_using_style.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_start_an_with_a_shared_element.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_start_an_with_ashared_element.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_use_animation_show_or_hide_view.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_use_animation_translate_view.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_use_animation_translation_view.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_use_fling_animation_translate_view.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/activity_use_scale_animation_scale_view.xml" value="0.346875" />
+        <entry key="app/src/main/res/layout/activity_use_spring_animation.xml" value="0.32864583333333336" />
+        <entry key="app/src/main/res/layout/another_scene.xml" value="0.5234375" />
+        <entry key="app/src/main/res/layout/custom_scene_1.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/layout/custom_scene_2.xml" value="0.17918676774638181" />
+        <entry key="app/src/main/res/layout/fragment_screen_slide_page.xml" value="0.3489583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3489583333333333" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

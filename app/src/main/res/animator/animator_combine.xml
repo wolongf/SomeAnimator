@@ -1,0 +1,56 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">
+    <!-- 同一个 set 中相同的动画类型会相互影响 -->
+    <set android:ordering="together">
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="translationX"
+            android:valueTo="100dp" />
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="translationY"
+            android:valueTo="200dp" />
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="alpha"
+            android:valueTo="0" />
+    </set>
+
+    <set android:ordering="together">
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="translationX"
+            android:valueTo="-100dp" />
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="alpha"
+            android:valueTo="1" />
+    </set>
+
+    <set android:ordering="together">
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="translationX"
+            android:valueTo="0" />
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="translationY"
+            android:valueTo="0" />
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="alpha"
+            android:valueTo="0" />
+    </set>
+
+    <set>
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="alpha"
+            android:valueTo="1f" />
+        <objectAnimator
+            android:duration="1000"
+            android:propertyName="textColor"
+            android:valueTo="#FF0000" />
+    </set>
+
+</set>

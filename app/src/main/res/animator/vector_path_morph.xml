@@ -1,0 +1,17 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:duration="3000"
+        android:interpolator="@android:interpolator/fast_out_linear_in"
+        android:propertyName="pathData"
+        android:valueFrom="M 200,200 l 0,-100 100,0 -100,200 0,0 z"
+        android:valueTo="M 200,200 l -100,-100 200,0 -100,200 -100,-200 z"
+        android:valueType="pathType" />
+</set><!--<set xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<objectAnimator-->
+    <!--    android:duration="1000"-->
+    <!--    android:interpolator="@android:interpolator/fast_out_slow_in"-->
+    <!--    android:propertyName="pathData"-->
+    <!--    android:valueFrom="M 30.5 130.5 L 30.5 30.5 L 60.5 30.5 L 60.5 130.5 L 30.5 130.5 M 130.5 130.5 L 130.5 30.5 L 100.5 30.5 L 100.5 130.5 L 130.5 130.5"-->
+    <!--    android:valueTo="M 30.5 125.5 L 55.5 80.5 L 80.5 35.5 L 81.366 125.5 L 30.5 125.5 M 130.5 125.5 L 106.177 81.719 L 80.5 35.5 L 81.366 125.5 L 130.5 125.5"-->
+    <!--    android:valueType="pathType" />-->
+    <!--</set>-->

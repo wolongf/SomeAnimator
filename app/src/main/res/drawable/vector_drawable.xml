@@ -1,0 +1,35 @@
+<!-- 绘制矢量图 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="400"
+    android:viewportHeight="400">
+
+    <group
+        android:name="rotationGroup"
+        android:pivotX="200"
+        android:pivotY="200">
+        <path
+            android:name="path"
+            android:fillColor="#000000"
+            android:pathData="M 200,200 l 0,-100 100,0 -100,200 z"
+            android:strokeAlpha="1" />
+    </group>
+</vector><!--<vector xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:width="161dp"-->
+    <!--android:height="161dp"-->
+    <!--android:viewportWidth="161"-->
+    <!--android:viewportHeight="161">-->
+
+    <!--<group-->
+    <!--    android:name="rotationGroup"-->
+    <!--    android:pivotX="80"-->
+    <!--    android:pivotY="80">-->
+    <!--    <path-->
+    <!--        android:name="path"-->
+    <!--        android:pathData="M 30.5 30.5 L 60.5 30.5 L 60.5 130.5 L 30.5 130.5 Z M 100.5 30.5 L 130.5 30.5 L 130.5 130.5 L 100.5 130.5 Z"-->
+    <!--        android:fillColor="#000000"-->
+    <!--        android:strokeColor="#000000"-->
+    <!--        android:strokeWidth="1"/>-->
+    <!--</group>-->
+    <!--</vector>-->

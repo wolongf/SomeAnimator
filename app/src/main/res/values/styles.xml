@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="slideAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_top</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="explodeAnim">
+        <item name="android:activityOpenEnterAnimation">@transition/explode_transition</item>
+        <item name="android:activityOpenExitAnimation">@transition/explode_transition</item>
+    </style>
+</resources>

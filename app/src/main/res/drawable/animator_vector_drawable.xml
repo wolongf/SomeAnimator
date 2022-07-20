@@ -1,0 +1,10 @@
+<!-- 为矢量图添加动画 -->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vector_drawable">
+    <target
+        android:name="rotationGroup"
+        android:animation="@animator/vector_rotation" />
+    <target
+        android:name="path"
+        android:animation="@animator/vector_path_morph" />
+</animated-vector>

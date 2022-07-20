@@ -1,0 +1,24 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/alipay_msp_success_blue7"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/alipay_msp_success_blue8"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/alipay_msp_success_blue9"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/alipay_msp_success_blue10"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/alipay_msp_success_blue11"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/alipay_msp_success_blue12"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/alipay_msp_success_blue13"
+        android:duration="200" />
+</animation-list>
