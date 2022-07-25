@@ -76,7 +76,7 @@ public class MoveViewsUsingAFlingAnimationActivity extends AppCompatActivity {
                         // 开启投掷动画（普通版 - 到达边界后不会反弹）
 //                        startSampleFlingAnimation(velocityX, velocityY);
                         // 开启投掷动画
-                        startFlingAnimation(velocityX, velocityY);
+                        startFlingAnimation(velocityX,velocityY);
                         // 释放速度跟踪器对象
                         velocityTracker.recycle();
                         velocityTracker = null;

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.myapplication13.Path.BoatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -69,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         // 使用 ViewPager2 在 Fragment 之间滑动
         findViewById(R.id.slideBetweenFragmentsUsingViewPager2).setOnClickListener(v -> {
             Intent intent = new Intent(this, SlideBetweenFragmentsUsingViewPager2Activity.class);
+            startActivity(intent);
+        });
+
+        //贝塞尔曲线原理与实战
+        findViewById(R.id.boatWave).setOnClickListener(v -> {
+            Intent intent = new Intent(this, BoatActivity.class);
             startActivity(intent);
         });
     }

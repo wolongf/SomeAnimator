@@ -75,6 +75,9 @@
             android:name=".AnimateDrawableGraphicsActivity"
             android:exported="false" />
         <activity
+            android:name=".Path.BoatActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
