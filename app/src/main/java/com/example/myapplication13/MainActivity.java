@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 运用弹簧物理学原理为图形运动添加动画
         findViewById(R.id.animateMovementUsingSpringPhysics).setOnClickListener(v -> {
-            Intent intent = new Intent(this, AnimateMovementUsingSpringPhysicsActivity.class);
+            Intent intent = new Intent(this, SpringAnimationActivity.class);
             startActivity(intent);
         });
 
