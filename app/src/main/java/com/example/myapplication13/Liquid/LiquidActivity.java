@@ -1,8 +1,5 @@
 package com.example.myapplication13.Liquid;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -11,9 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication13.R;
 
 public class LiquidActivity extends AppCompatActivity {
-    /**
-     * The view to show the traffic info in general with animation
-     */
+
     private LiquidView mLiquidView;
 
     @Override
@@ -40,18 +35,12 @@ public class LiquidActivity extends AppCompatActivity {
         mLiquidView.setLiquidPercent(100 - percent);
         switchLiquidColor(percent);
     }
-    /**
-     * 根据不同百分比设置LiquidView液体颜色
-     *
-     * @param usedPercent 已用流量百分比
-     */
+
     private void switchLiquidColor(float usedPercent) {
         if (usedPercent < 0) {
             return;
         }
 
-
-        //正常流量模式
         if (usedPercent >= 0 && usedPercent <= 60) {// 当使用0<=liquidUsedPercent<=60,液体为绿色
             mLiquidView.setLiquidBackgroundColor(Color.rgb(53, 147, 65));
             mLiquidView.setRingColor(0, Color.rgb(53, 147, 65));
@@ -68,7 +57,7 @@ public class LiquidActivity extends AppCompatActivity {
             mLiquidView.setLiquidBackgroundColor(Color.rgb(205, 67, 51));
             mLiquidView.setRingColor(0, Color.rgb(205, 67, 51));
             mLiquidView.setLiquidColor(Color.rgb(231, 90, 72));
-        } else {// 流量超出
+        } else {
             mLiquidView.setLiquidBackgroundColor(Color.rgb(205, 67, 51));
             mLiquidView.setRingColor(0, Color.rgb(205, 67, 51));
             mLiquidView.setLiquidColor(Color.rgb(205, 67, 51));

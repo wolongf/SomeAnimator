@@ -34,8 +34,8 @@ public class LiquidView extends View {
     private static final int DEFAULT_LIQUID_SPEED = 6;
     private static final int LIQUID_AMPLITUDE_MAX_VALUE = 42;
     private static final int LIQUID_SPEED_MAX = 40;
-    private static final int LIQUID_ONDRAW_FRAME_RATE = 33;// 液体刷新帧数
-    private static final long EVERY_FRAME_FINISH_TIME = 1000 / LIQUID_ONDRAW_FRAME_RATE;//每帧耗时
+    private static final int LIQUID_ONDRAW_FRAME_RATE = 33;
+    private static final long EVERY_FRAME_FINISH_TIME = 1000 / LIQUID_ONDRAW_FRAME_RATE;
 
     private ScheduledExecutorService mScheduledExecutorService;
     private UpdateTimerTask mUpdateTimerTask;
@@ -43,7 +43,6 @@ public class LiquidView extends View {
     private class UpdateTimerTask implements Runnable {
         @Override
         public void run() {
-            //do not need to reDraw when percent is over than 99% or less than 0%
             if (mLiquid.getPercent() > 99 || mLiquid.getPercent() <= 0) {
                 return;
             }
@@ -108,7 +107,7 @@ public class LiquidView extends View {
         private int mLiquidOuterRadius;
         private int mLiquidColor;
         private int mLiquidBackgroundColor;
-        // private float mAlpha;
+
         private float mLiquidPlaneLeft;
         private float mLiquidPlaneRight;
         private float mLiquidPlanePercent;
@@ -121,7 +120,7 @@ public class LiquidView extends View {
         private float mCurrentWaveStep;
         private float mTopOffset;
         private final float[] mLiquidWave = new float[360];
-        private final float[] mLiquidWavePoints = new float[360 * 4];// Array of points to draw [x0 y0 x1 y1 x2 y2 ...]
+        private final float[] mLiquidWavePoints = new float[360 * 4];
         private final PorterDuffXfermode mPorterDuffXfermode = new PorterDuffXfermode(Mode.CLEAR);
 
         public Liquid() {
@@ -137,7 +136,7 @@ public class LiquidView extends View {
             mLiquidPlanePercent = DEFAULT_LIQUID_PERCENT;
             mLiquidPlaneAmplitude = DEFAULT_LIQUID_AMPLITUDE;
             mLiquidWaveSpeed = DEFAULT_LIQUID_SPEED;
-            //mCurrentWaveStep = mLiquidWaveSpeed * 2;
+
             mLiquidWaveAngle = 0;
             mCurrentWaveStep = mLiquidWaveSpeed * 2;
             for (int i = mLiquidWave.length - 1; i >= 0; i--) {
@@ -210,8 +209,7 @@ public class LiquidView extends View {
                     mLiquidWaveAngle = (mLiquidWaveAngle + mLiquidWaveSpeed) % 360;
                     mLiquidWave[0] = (float) Math.sin((float) (mLiquidWaveAngle * Math.PI / 180));
                 }
-                //因为桌面显示的流量球是透明的，画线不能有任何重叠
-                //这样在某些宽度下，主界面的流量球会有小于1pixel的间隙
+
                 diff = 1.0f;
             }
             float h = (100 - mLiquidPlanePercent) * mLiquidRadius / 50;
@@ -227,12 +225,11 @@ public class LiquidView extends View {
             paint.setColor(mLiquidBackgroundColor);
             paint.setStrokeWidth(1);
             paint.setStyle(Paint.Style.FILL);
-            // 绘制背景圆
+
             canvas.drawCircle(mLiquidCenterX, mLiquidCenterY, mLiquidRadius, paint);
 
-            // Jerry
+
             paint.setColor(mLiquidColor);
-            // 绘制液体下方
             if (mIsStaticDraw) {
                 canvas.drawRect(mLiquidPlaneLeft, mCurrentLiquidWaveBottom - diff,
                         mLiquidPlaneRight, mLiquidCenterY * 2,
@@ -266,13 +263,10 @@ public class LiquidView extends View {
                 path.lineTo(mLiquidPlaneLeft, getHeight());
                 path.lineTo(mLiquidWavePoints[0], mLiquidWavePoints[1]);
                 paint.setAntiAlias(true);
-                // for bugFix#281054 : 在M80机器上, canvas.drawPath()在path改变的时候会有native内存泄漏.
-                // canvas.drawPath(path, paint);
                 canvas.clipPath(path);
                 canvas.drawColor(paint.getColor());
             }
 
-            // 把液体下方多出圆外的部分设置透明
             paint.setStrokeWidth(4);
             paint.setColor(mLiquidBackgroundColor);
             paint.setStyle(Paint.Style.STROKE);
@@ -299,14 +293,13 @@ public class LiquidView extends View {
     private SensorManager mSensorManager;
     private LiquidViewSensorEventListener mSensorEventListener;
 
-    /*package*/ float mAngle;
-    /*package*/ float mMaxAngle = 30;
+    float mAngle;
+    float mMaxAngle = 30;
     private float mLiquidAngle = 0;
     private float mLiquidAngleSpeed = 0;
     private boolean mIsUpdateRings = false;
     private boolean mIsUpdateLiquid = false;
     private boolean mGravityEnable = false;
-    // 是否开启静态绘制，供SafeWidgetProvider使用
     private boolean mIsStaticDraw = false;
 
     private final ArrayList<Ring> mRings = new ArrayList<Ring>();
@@ -366,14 +359,12 @@ public class LiquidView extends View {
         mLiquid.setBackgroundColor(color);
     }
 
-    // add by HJX
     @Override
     public void setAlpha(float alpha) {
         // super.setAlpha(alpha);
         // mLiquid.setBackgroundAlpha(alpha);
     }
 
-    // 设置 圆环接口
     public int addRing(int borderWidth) {
         mIsUpdateRings = true;
         Ring ring = new Ring();
@@ -442,12 +433,10 @@ public class LiquidView extends View {
         mRings.clear();
     }
 
-    // add by HJX
     public int getRingCount() {
         return mRings.size();
     }
 
-    // 设置 液体接口
     public void setLiquidColor(int liquidColor) {
         mLiquid.setColor(liquidColor);
     }
@@ -605,7 +594,6 @@ public class LiquidView extends View {
             }
         }
 
-        // canvas.saveLayerAlpha(0, 0, mViewWidth, mViewHeight, 255, Canvas.ALL_SAVE_FLAG);
         canvas.save();
         if (mIsUpdateRings) {
             mIsUpdateRings = false;
@@ -621,7 +609,6 @@ public class LiquidView extends View {
             mLiquid.init(mCenterX, mCenterY, mInnerCircleRadius, mRadius, mTopOffset);
         }
 
-        // draw liquid
         if (mGravityEnable) {
             if (Math.abs(mAngle - mLiquidAngle) > 1.4f) {
                 mLiquidAngleSpeed = (mAngle - mLiquidAngle) / 15.0f;
@@ -629,8 +616,7 @@ public class LiquidView extends View {
                 mLiquidAngleSpeed = 0;
             }
             mLiquidAngle += mLiquidAngleSpeed;
-            // canvas.setBitmap(BitmapFactory.decodeResource(getResources(),
-            // R.drawable.bg));
+
             canvas.save();
             canvas.rotate(mLiquidAngle, mCenterX, mCenterY);
             mLiquid.draw(canvas, mLiquidPaint);
@@ -639,19 +625,9 @@ public class LiquidView extends View {
             mLiquid.draw(canvas, mLiquidPaint);
         }
 
-        // draw rings
         for (Ring ring : mRings) {
             ring.draw(canvas, mRingsPaint);
         }
-        // int radius = Math.min(getWidth(), getHeight()) / 2;
-        // mLiquidPaint.setColor(0xffff0000);
-        // canvas.save();
-        // canvas.rotate(mT, getWidth() / 2, getHeight() / 2);
-        // canvas.clipRect(0, 0, getWidth(), 100);
-        // canvas.drawCircle(getWidth() / 2, getHeight() / 2, radius,
-        // mLiquidPaint);
-        // canvas.restore();
-        // mT = (mT + 1) % 360;
         canvas.restore();
     }
 
