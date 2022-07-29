@@ -23,5 +23,11 @@ public class MoveAViewWithAnimationActivity extends AppCompatActivity {
             Intent intent = new Intent(this, AddCurvedMotionActivity.class);
             startActivity(intent);
         });
+
+        //添加自转动作
+        findViewById(R.id.addRotateMotion).setOnClickListener(v -> {
+            Intent intent = new Intent(this, AddRotateMotionActivity.class);
+            startActivity(intent);
+        });
     }
 }
