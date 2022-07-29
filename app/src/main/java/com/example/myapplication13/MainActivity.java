@@ -15,9 +15,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //使用重力传感器绘制动画
+        findViewById(R.id.liquidAnimation).setOnClickListener(v -> {
+            Intent intent = new Intent(this, LiquidActivity.class);
+            startActivity(intent);
+        });
+
         // 为可绘制图形添加动画
         findViewById(R.id.animateDrawableGraphics).setOnClickListener(v -> {
-            Intent intent = new Intent(this, LiquidActivity.class);
+            Intent intent = new Intent(this, AnimateDrawableGraphicsActivity.class);
             startActivity(intent);
         });
 
