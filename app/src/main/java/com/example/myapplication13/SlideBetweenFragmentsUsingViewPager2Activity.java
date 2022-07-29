@@ -161,7 +161,6 @@ public class SlideBetweenFragmentsUsingViewPager2Activity extends FragmentActivi
     /**
      * 深度页面转换器
      */
-    @RequiresApi(21)
     public class DepthPageTransformer implements ViewPager2.PageTransformer {
         private static final float MIN_SCALE = 0.75f;
 

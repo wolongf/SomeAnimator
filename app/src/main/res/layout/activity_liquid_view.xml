@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <com.example.myapplication13.Liquid.LiquidView
+        android:id="@+id/liquidView"
+        android:layout_width="182dp"
+        android:layout_height="182dp"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:layout_width="182dp"
+        android:layout_height="182dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:maxLines="1"
+            android:text="shuai"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/summary"
+        android:layout_width="182dp"
+        android:layout_height="182dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <!-- android:background="@drawable/mz_item_background" 需要点击效果？？？ -->
+            <TextView
+                android:id="@+id/traffic_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/traffic_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingBottom="4dp"
+                android:textColor="#ffffff"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/traffic_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+</FrameLayout>

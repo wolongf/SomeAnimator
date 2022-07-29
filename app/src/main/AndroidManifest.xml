@@ -77,6 +77,8 @@
         <activity
             android:name=".Path.BoatActivity"
             android:exported="false" />
+        <activity android:name=".Liquid.LiquidActivity"
+            android:exported="false"/>
         <activity android:name=".SpringAnimationActivity"
             android:exported="false"/>
         <activity
@@ -88,6 +90,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name="com.example.myapplication13.Liquid.LiquidWidget"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/liquid_appwidget_info" />
+        </receiver>
+
     </application>
 
 </manifest>

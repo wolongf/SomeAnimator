@@ -1,0 +1,7 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/liquid_widget_view"
+    android:minWidth="96dp"
+    android:minHeight="96dp"
+    android:previewImage="@drawable/bamuwei"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen" />

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.myapplication13.Liquid.LiquidActivity;
 import com.example.myapplication13.Path.BoatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 为可绘制图形添加动画
         findViewById(R.id.animateDrawableGraphics).setOnClickListener(v -> {
-            Intent intent = new Intent(this, AnimateDrawableGraphicsActivity.class);
+            Intent intent = new Intent(this, LiquidActivity.class);
             startActivity(intent);
         });
 

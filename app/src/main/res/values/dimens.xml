@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="traffic_liquidView_borderwidth">5dp</dimen>
+    <dimen name="traffic_wp_liquidview_ring_borderwidth" >6dp</dimen>
+    <dimen name="traffic_screen_liquiView_width" >63dp</dimen>
+</resources>
