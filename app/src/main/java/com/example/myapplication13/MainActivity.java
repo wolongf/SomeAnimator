@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.myapplication13.Glow.GlowActivity;
 import com.example.myapplication13.Liquid.LiquidActivity;
 import com.example.myapplication13.Path.BoatActivity;
 
@@ -84,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
         //贝塞尔曲线原理与实战
         findViewById(R.id.boatWave).setOnClickListener(v -> {
             Intent intent = new Intent(this, BoatActivity.class);
+            startActivity(intent);
+        });
+
+        //自定义View重绘画布达到动画的效果
+        findViewById(R.id.glow).setOnClickListener(v -> {
+            Intent intent = new Intent(this, GlowActivity.class);
             startActivity(intent);
         });
     }

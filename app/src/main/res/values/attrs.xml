@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GlowView">
+        <attr name="gv_color" format="color" />
+        <attr name="gv_stroke_width" format="dimension" />
+        <attr name="gv_radius" format="dimension" />
+        <attr name="gv_subjoin_radius" format="dimension" />
+    </declare-styleable>
+</resources>

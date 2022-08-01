@@ -83,6 +83,8 @@
             android:exported="false"/>
         <activity android:name=".AddRotateMotionActivity"
             android:exported="false"/>
+        <activity android:name=".Glow.GlowActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
